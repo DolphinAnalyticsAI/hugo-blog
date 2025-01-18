@@ -1,5 +1,5 @@
 ---
-title: "Welcome to TechInsight Hub"
+title: "Welcome to TechInsight Hub Master"
 date: 2024-03-15
 draft: false
 ---
