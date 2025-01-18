@@ -36,23 +36,25 @@ jobs:
           extended: true           # Include Sass/SCSS support
 
       # Step 3: Build your website
-      - name: Build
+      - name: Build with Hugo
         working-directory: ./src   # Go to src folder where Hugo files are
         run: hugo --minify        # Build the website and minimize files
 
       # Step 4: Save the built website files
-      - name: Upload artifact
+      - name: Upload artifact (built site)
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public          # The folder containing your built website
 
   # Second job: Deploy the site to GitHub Pages
   deploy:
+    needs: build                  # Wait for build job to finish first
+    runs-on: ubuntu-latest    
+    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}  # Shows the deployment URL
-    runs-on: ubuntu-latest
-    needs: build                  # Wait for build job to finish first
+    
     steps:
       # Deploy the website to GitHub Pages
       - name: Deploy to GitHub Pages
