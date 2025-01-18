@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Tools on TechInsight Hub</title>
+    <link>http://localhost:1313/tags/developer-tools/</link>
+    <description>Recent content in Developer Tools on TechInsight Hub</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jan 2025 20:02:29 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/developer-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Cursor: The Next-Generation Code Editor for Developers</title>
+      <link>http://localhost:1313/blog/2025-01-13-cursor-editor/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2025-01-13-cursor-editor/</guid>
+      <description>&lt;p&gt;In the evolving world of software development, a code editor is more than a tool—it’s a workspace, a collaborator, and a productivity driver. Cursor, a next-generation code editor, is gaining momentum as a game-changing platform designed for modern developers. Let’s dive into what makes Cursor stand out.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-cursor&#34;&gt;What is Cursor?&lt;/h2&gt;&#xA;&lt;p&gt;Cursor is a cutting-edge code editor that combines the best of traditional development environments with the power of AI. It’s designed to simplify workflows, enhance collaboration, and provide intelligent assistance throughout the development process. Cursor is not just another editor; it’s an all-in-one platform built for the future of coding.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
