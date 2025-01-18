@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechInsight Hub</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            display: grid;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            background-color: #f5f6fa;
+        }
+
+        /* Header styles */
+        header {
+            grid-area: header;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #fff, #74b9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Main content styles */
+        main {
+            grid-area: main;
+            max-width: 1600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Article grid */
+        .articles {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        article {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        article h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        article .meta {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        article .tag {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Sidebar */
+        aside {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 5rem;
+        }
+
+        aside h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0f2fe;
+        }
+
+        aside ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        aside li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* Footer styles */
+        footer {
+            grid-area: footer;
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .articles {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Ultra-wide screen optimizations */
+        @media (min-width: 2000px) {
+            main {
+                max-width: 2000px;
+                grid-template-columns: 4fr 1fr;
+            }
+
+            .articles {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            body {
+                font-size: 18px;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            article, aside {
+                background: #2d2d2d;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            }
+
+            article h2, aside h3 {
+                color: #e0e0e0;
+            }
+
+            aside li {
+                border-bottom-color: #3d3d3d;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">TechInsight Hub</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#articles">Articles</a>
+                <a href="#topics">Topics</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="articles">
+            <article>
+                <h2>GPT-5: The Next Evolution in AI</h2>
+                <div class="meta">
+                    <span class="tag">AI</span>
+                    <span class="tag">Machine Learning</span>
+                    <p>Published: March 15, 2024</p>
+                </div>
+                <p>OpenAI's rumored GPT-5 is set to revolutionize the AI landscape with unprecedented natural language understanding and multimodal capabilities. Industry experts speculate about potential features including enhanced reasoning, improved factual accuracy, and advanced code generation...</p>
+            </article>
+
+            <article>
+                <h2>The Rise of Quantum Data Centers</h2>
+                <div class="meta">
+                    <span class="tag">Infrastructure</span>
+                    <span class="tag">Quantum Computing</span>
+                    <p>Published: March 14, 2024</p>
+                </div>
+                <p>Major tech companies are investing billions in quantum-ready data centers. These facilities combine traditional computing with quantum processing units, preparing for the next generation of computational challenges...</p>
+            </article>
+
+            <article>
+                <h2>AI-Driven Software Development</h2>
+                <div class="meta">
+                    <span class="tag">Development</span>
+                    <span class="tag">AI</span>
+                    <p>Published: March 13, 2024</p>
+                </div>
+                <p>The landscape of software development is transforming with AI pair programmers. From code completion to architectural suggestions, AI tools are becoming indispensable for modern developers...</p>
+            </article>
+
+            <article>
+                <h2>Tech Giants' Race to AGI</h2>
+                <div class="meta">
+                    <span class="tag">AI</span>
+                    <span class="tag">Industry</span>
+                    <p>Published: March 12, 2024</p>
+                </div>
+                <p>The competition for Artificial General Intelligence heats up as leading tech companies accelerate their research. Microsoft, Google, and Anthropic lead the charge with breakthrough developments in multi-modal AI systems...</p>
+            </article>
+
+            <article>
+                <h2>Green Computing Revolution</h2>
+                <div class="meta">
+                    <span class="tag">Sustainability</span>
+                    <span class="tag">Infrastructure</span>
+                    <p>Published: March 11, 2024</p>
+                </div>
+                <p>Data centers are going green with innovative cooling solutions and renewable energy integration. Learn how the tech industry is addressing its carbon footprint while maintaining performance...</p>
+            </article>
+
+            <article>
+                <h2>The Future of Edge Computing</h2>
+                <div class="meta">
+                    <span class="tag">Infrastructure</span>
+                    <span class="tag">IoT</span>
+                    <p>Published: March 10, 2024</p>
+                </div>
+                <p>Edge computing is transforming how we process data, bringing computation closer to data sources. Discover how this technology is enabling real-time processing and reducing latency in critical applications...</p>
+            </article>
+        </div>
+
+        <aside>
+            <h3>Trending Topics</h3>
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Quantum Computing</li>
+                <li>Edge Computing</li>
+                <li>Sustainable Tech</li>
+                <li>Cloud Infrastructure</li>
+            </ul>
+            
+            <h3>Top Tech Companies</h3>
+            <ul>
+                <li>Microsoft</li>
+                <li>OpenAI</li>
+                <li>Google</li>
+                <li>NVIDIA</li>
+                <li>Amazon</li>
+            </ul>
+
+            <h3>Latest Updates</h3>
+            <ul>
+                <li>GPT-5 Development</li>
+                <li>Quantum Breakthroughs</li>
+                <li>Green Data Centers</li>
+                <li>AI Ethics Guidelines</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechInsight Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

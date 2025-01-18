@@ -1,0 +1,18 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "TechInsight Hub"
+publishDir = "../public"
+
+# Development parameters
+enableGitInfo = true
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 2 

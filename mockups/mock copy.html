@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Article grid */
+        .articles {
+            display: grid;
+            gap: 2rem;
+        }
+
+        article {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+        }
+
+        /* Sidebar */
+        aside {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tech Blog</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#articles">Articles</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="articles">
+            <article>
+                <h2>Getting Started with Hugo</h2>
+                <p>Published: March 15, 2024</p>
+                <p>Learn how to build lightning-fast static websites with Hugo, the popular open-source static site generator...</p>
+            </article>
+            <article>
+                <h2>CSS Grid Mastery</h2>
+                <p>Published: March 14, 2024</p>
+                <p>Dive deep into CSS Grid and learn how to create complex layouts with ease...</p>
+            </article>
+            <article>
+                <h2>Modern HTML5 Practices</h2>
+                <p>Published: March 13, 2024</p>
+                <p>Explore the latest HTML5 features and best practices for modern web development...</p>
+            </article>
+        </div>
+
+        <aside>
+            <h3>Recent Posts</h3>
+            <ul>
+                <li>Getting Started with Hugo</li>
+                <li>CSS Grid Mastery</li>
+                <li>Modern HTML5 Practices</li>
+            </ul>
+            
+            <h3>Categories</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Programming</li>
+                <li>Design</li>
+                <li>Tools</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tech Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

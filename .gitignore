@@ -1,0 +1,13 @@
+# Ignore the public directory
+/public/
+
+# Ignore the resources directory
+/resources/
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
