@@ -1,11 +1,57 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    color: #2d3436;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+}
+
+/* Sidebar styles */
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed position */
+    width: 200px; /* Fixed width */
+}
+
+.sidebar .nav-links {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    gap: 1rem;
+}
+
+.sidebar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content adjustment */
+main {
+    margin-left: 220px; /* Leave space for the sidebar */
     padding: 2rem;
 }
 
-article {
-    margin-bottom: 2rem;
-} 
+/* Other styles remain unchanged... */
